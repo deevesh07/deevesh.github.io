@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Types of Devices</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: oldlace;
+    }
+
+    header {
+      background-color: darkgreen;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav button {
+      float: left;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    nav button:hover {
+      background-color: #4CAF50;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .device {
+      display: none;
+      background-color: white;
+      border: 2px solid darkgreen;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 0 auto;
+      width: 80%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .device img {
+      width: 250px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>3 Types of Devices</h1>
+  </header>
+
+  <nav>
+    <button onclick="showDevice('pi')">Raspberry Pi 4</button>
+    <button onclick="showDevice('arduino')">Arduino Uno</button>
+    <button onclick="showDevice('laptop')">Laptop / PC</button>
+  </nav>
+
+  <section>
+    <div id="pi" class="device">
+      <h2>Raspberry Pi 4</h2>
+      <p>The Raspberry Pi 4 is a small single-board computer used for coding, IoT, and networking projects. It’s powerful, affordable, and ideal for students and developers.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Raspberry_Pi_4_Model_B_-_Side.jpg" alt="Raspberry Pi 4">
+    </div>
+
+    <div id="arduino" class="device">
+      <h2>Arduino Uno</h2>
+      <p>The Arduino Uno is a microcontroller board commonly used for electronics projects, robotics, and automation systems. It’s easy to program and beginner-friendly.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Uno">
+    </div>
+
+    <div id="laptop" class="device">
+      <h2>Laptop / PC</h2>
+      <p>A laptop or PC is used for software development, research, and documentation. It’s the main tool for writing code, testing applications, and managing projects.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Laptop_computer.jpg" alt="Laptop">
+    </div>
+  </section>
+
+  <footer>
+    School of Computing © 2025
+  </footer>
+
+  <script>
+    function showDevice(deviceId) {
+      var devices = document.getElementsByClassName("device");
+      for (var i = 0; i < devices.length; i++) {
+        devices[i].style.display = "none";
+      }
+      document.getElementById(deviceId).style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
