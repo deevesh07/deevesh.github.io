@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TasteBite Restaurant</title>
+  <style>
+    /* ====== GENERAL STYLES ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff8f0;
+    }
+
+    header {
+      background-color: #ff7b00;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffe0b2;
+    }
+
+    /* ====== HERO SECTION ====== */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* ====== ABOUT SECTION ====== */
+    .about {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .about h2 {
+      color: #ff7b00;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* ====== MENU SECTION ====== */
+    .menu {
+      padding: 60px 20px;
+      background-color: #fff8f0;
+      text-align: center;
+    }
+
+    .menu h2 {
+      color: #ff7b00;
+      margin-bottom: 40px;
+    }
+
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .menu-item {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .menu-item h3 {
+      margin-bottom: 8px;
+      color: #ff7b00;
+    }
+
+    /* ====== CONTACT SECTION ====== */
+    .contact {
+      background-color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #ff7b00;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background-color: #ff7b00;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* ====== RESPONSIVE DESIGN ====== */
+    @media (max-width: 1024px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.3rem;
+      }
+      .menu-items {
+        flex-direction: column;
+        align-items: center;
+      }
+      .menu-item {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TasteBite</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Delicious Meals, Made with Love</h2>
+    <p>Welcome to TasteBite Restaurant — where every bite tells a story of flavor and freshness!</p>
+  </section>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>TasteBite is a family-owned restaurant serving fresh, flavorful dishes inspired by local and international cuisine. We believe in quality ingredients and warm hospitality to make every meal memorable.</p>
+  </section>
+
+  <section class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg?auto=format&fit=crop&w=600&q=80" alt="Pasta">
+        <h3>Classic Pasta</h3>
+        <p>Creamy and rich with authentic Italian flavor.</p>
+      </div>
+      <div class="menu-item">
+        <img src="tasty-burger-french-fries-fire-close-up-home-made-flames-137249900.webp?auto=format&fit=crop&w=600&q=80" alt="Burger">
+        <h3>Gourmet Burger</h3>
+        <p>Juicy beef patty with melted cheese and fresh veggies.</p>
+      </div>
+      <div class="menu-item">
+        <img src="360_F_301978652_O0aPwap1JaEVaAhj3mIlbqNnJGmRyCzC.jpg?auto=format&fit=crop&w=600&q=80" alt="Dessert">
+        <h3>Sweet Dessert</h3>
+        <p>End your meal with our signature chocolate lava cake.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>📍 123 Food Street, Flavor Town</p>
+    <p>📞 +60149031581</p>
+    <p>📧 info@tastebite.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 TasteBite Restaurant | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
