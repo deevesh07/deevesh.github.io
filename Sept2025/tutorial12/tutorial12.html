@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form + Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #c7e3e7;
+    }
+    table {
+      background-color: #bde0e3;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+    td {
+      padding: 5px;
+    }
+    input, select, textarea {
+      padding: 5px;
+      width: 200px;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <table align="center" border="0">
+      <tr>
+        <th colspan="2">Personal details:</th>
+      </tr>
+      <tr>
+        <td>First Name:</td>
+        <td><input type="text" name="fname"></td>
+      </tr>
+      <tr>
+        <td>Last Name:</td>
+        <td><input type="text" name="lname"></td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+        </td>
+      </tr>
+      <tr>
+        <td>Choose your favorite subjects:</td>
+        <td>
+          <input type="checkbox" name="subject" value="DCS4103"> DCS4103
+          <input type="checkbox" name="subject" value="DCS3003"> DCS3003
+          <input type="checkbox" name="subject" value="MST1003"> MST1003
+          <input type="checkbox" name="subject" value="MST2003"> MST2003
+        </td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td><textarea rows="3" cols="25" name="address"></textarea></td>
+      </tr>
+      <tr>
+        <td>Date of Birth:</td>
+        <td><input type="date" name="dob"></td>
+      </tr>
+      <tr>
+        <td>Login password:</td>
+        <td><input type="password" name="password"></td>
+      </tr>
+      <tr>
+        <td>Course:</td>
+        <td>
+          <select name="course">
+            <option>List of Courses</option>
+            <option>Diploma in Network & Security</option>
+            <option>Diploma in Artificial Intelligence</option>
+            <option>Diploma in Multimedia & Web Development</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="center">
+        <td colspan="2">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
