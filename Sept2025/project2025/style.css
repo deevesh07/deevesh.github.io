@@ -1,0 +1,319 @@
+/* ==============================================
+   Global Styles
+============================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* ==============================================
+   Header & Navigation
+============================================== */
+.site-header {
+  background-color: #003366;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.site-header .brand {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #004080;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: #0059b3;
+}
+
+/* ==============================================
+   Main Content
+============================================== */
+main {
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* ==============================================
+   Buttons
+============================================== */
+.btn {
+  display: inline-block;
+  background-color: #0059b3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #004080;
+  transform: scale(1.05);
+}
+
+/* ==============================================
+   Forms (for Contact & Admission pages)
+============================================== */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #0059b3;
+}
+
+form button {
+  width: 100%;
+}
+
+/* ==============================================
+   Footer
+============================================== */
+.site-footer {
+  text-align: center;
+  background: #003366;
+  color: white;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* ==============================================
+   Gallery (for Projects Page)
+============================================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ==============================================
+   Programmes Page - Center Image
+============================================== */
+.programme-image {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.programme-image img {
+  max-width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.programme-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ==============================================
+   Table Styling (for Programmes Page)
+============================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #0059b3;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* ==============================================
+   Scroll to Top Button (JS creates this)
+============================================== */
+#scrollTop {
+  background: #0059b3;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==============================================
+   Animations & Effects
+============================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==============================================
+   Dark Mode
+============================================== */
+.dark-mode {
+  background: #111;
+  color: #eee;
+}
+
+.dark-mode .site-header,
+.dark-mode .nav,
+.dark-mode .site-footer {
+  background: #000;
+}
+
+.dark-mode a {
+  color: #80bfff;
+}
+
+.dark-mode section {
+  background: #1a1a1a;
+}
+
+.dark-mode .btn {
+  background: #0066cc;
+}
+
+/* ==============================================
+   Responsive Design
+============================================== */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav a {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .site-header .brand {
+    font-size: 1.5rem;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .programme-image img {
+    max-width: 90%;
+  }
+}
+
+/* ==============================================
+   Popup Overlay (used in JS for gallery)
+============================================== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+/* ==============================================
+   Typing Animation (Homepage)
+============================================== */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typing {
+  overflow: hidden;
+  border-right: 3px solid #0059b3;
+  white-space: nowrap;
+  animation: typing 3s steps(30, end);
+}
