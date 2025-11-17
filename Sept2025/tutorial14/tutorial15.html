@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 15 - Table + JavaScript</title>
+
+    <script>
+        function clickCol1() {
+            alert("You clicked column 1!");
+        }
+
+        function mouseOverCol2() {
+            alert("Mouse over column 2!");
+        }
+
+        function dblClickCol3() {
+            alert("Double clicked column 3!");
+        }
+
+        function changeBgCol4() {
+            document.getElementById("col4").style.backgroundColor = "yellow";
+        }
+    </script>
+
+</head>
+<body>
+
+<h2>HTML Table + JavaScript Events</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Col 1</th>
+        <th>Col 2</th>
+        <th>Col 3</th>
+        <th>Col 4</th>
+    </tr>
+
+    <tr>
+        <td onclick="clickCol1()">Row-1 Col-1</td>
+
+        <td onmouseover="mouseOverCol2()">Row-1 Col-2</td>
+
+        <td ondblclick="dblClickCol3()">Row-1 Col-3</td>
+
+        <td id="col4" onclick="changeBgCol4()">Row-1 Col-4</td>
+    </tr>
+</table>
+
+</body>
+</html>
